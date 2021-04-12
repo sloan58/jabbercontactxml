@@ -95,7 +95,7 @@ function App() {
           </div>
           <div className='card-body'>
             <h5 className='card-title'>
-              Coverts a CSV contact list into XML format.
+              Converts a CSV contact list into XML format.
             </h5>
             <p className='card-text'>
               When you want to bulk import Jabber contacts into Windows, you
