@@ -129,7 +129,7 @@ function App() {
         </div>
         <div className='card my-4'>
           <div className='card-header bg-white'>
-            <h4>How do I use it this app?</h4>
+            <h4>How do I use this app?</h4>
           </div>
           <div className='card-body'>
             <ol className='card-text'>
