@@ -104,7 +104,7 @@ function App() {
               Jabber.
             </p>
             <p className='card-text'>
-              If you're building from the template file, keep the headers, but
+              If you're building from the template file, keep the headers but
               remove row 2 before loading. The only required field to build the
               list is the first one (user@domain). The nickname and group name
               are optional.
