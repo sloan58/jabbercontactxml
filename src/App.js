@@ -77,7 +77,7 @@ function App() {
 
   return (
     <>
-      <nav className='navbar navbar-light bg-white'>
+      <nav className='navbar navbar-light'>
         <a className='navbar-brand' href='/#'>
           <img
             src='/jabber.png'
@@ -90,7 +90,7 @@ function App() {
         </a>
       </nav>
       <div className='container'>
-        <div className='card my-4'>
+        <div className='card shadow my-4'>
           <div className='card-header bg-white'>
             <h4>What does this app do?</h4>
           </div>
@@ -127,7 +127,7 @@ function App() {
             </div>
           </div>
         </div>
-        <div className='card my-4'>
+        <div className='card shadow my-4'>
           <div className='card-header bg-white'>
             <h4>How do I use this app?</h4>
           </div>
@@ -151,7 +151,7 @@ function App() {
             </ol>
           </div>
         </div>
-        <div className='card my-4'>
+        <div className='card shadow my-4'>
           <div className='card-header bg-white'>
             <h4>Are you going to steal my data?</h4>
           </div>
@@ -163,7 +163,7 @@ function App() {
             </p>
           </div>
         </div>
-        <div className='card my-4'>
+        <div className='card shadow my-4'>
           <div className='card-header bg-white'>
             <h4>Upload your CSV</h4>
           </div>
