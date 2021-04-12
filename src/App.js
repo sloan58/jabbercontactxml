@@ -109,7 +109,8 @@ function App() {
             <ol className='card-text'>
               <li>Download the template from above</li>
               <li>
-                Fill in the details for each column (user@name, nickname, group)
+                Fill in the details for each column (user@domain, nickname,
+                group)
               </li>
               <li>
                 Use the Upload option below to process your contacts CSV file{' '}
