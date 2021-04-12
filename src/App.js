@@ -7,7 +7,7 @@ function App() {
         if (row.data[2] === '') {
           return 'Contacts'
         }
-        return row.data[2].trim()
+        return row.data[2]
       })
       .filter((row, index, _arr) => _arr.indexOf(row) === index)
 
@@ -23,7 +23,7 @@ function App() {
 
     groups.forEach((group) => {
       outXml = outXml.concat(`<group>`)
-      outXml = outXml.concat(`<gname>${group}</gname>`)
+      outXml = outXml.concat(`<gname>${group.trim()}</gname>`)
       data.forEach((row) => {
         if (row.data[0] !== '' && row.data[2] === group) {
           outXml = outXml.concat('<user>')
