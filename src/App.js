@@ -109,11 +109,13 @@ function App() {
             <ol className='card-text'>
               <li>Download the template from above</li>
               <li>
-                Fill in the details for each column (name, domain, contact ID)
+                Fill in the details for each column (user@name, nickname, group)
               </li>
               <li>
-                Use the 'Upload CSV' option below to process your contacts CSV
-                file
+                Use the Upload option below to process your contacts CSV file{' '}
+                <strong>
+                  <u>in the browser</u>
+                </strong>
               </li>
               <li>
                 The app will process and provide you a download of the XML
