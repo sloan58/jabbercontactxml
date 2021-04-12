@@ -145,7 +145,7 @@ function App() {
               </li>
               <li>
                 The app will process and provide you a download of the XML
-                equivalent on the source CSV
+                equivalent of the source CSV
               </li>
             </ol>
           </div>
