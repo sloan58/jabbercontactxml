@@ -16,6 +16,7 @@ function App() {
         return row.data[2]
       })
       .filter((row, index, _arr) => _arr.indexOf(row) === index)
+      .filter(Boolean)
 
     // Find rows without a group and set their group as 'Contacts'
     data.forEach((row, index) => {
