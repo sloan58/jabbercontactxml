@@ -141,7 +141,7 @@ function App() {
               <li>
                 Use the Upload option below to process your contacts CSV file{' '}
                 <strong>
-                  <u>in the browser</u>
+                  <u>in the browser</u> (see next section)
                 </strong>
               </li>
               <li>
