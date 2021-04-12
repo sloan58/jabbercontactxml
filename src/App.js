@@ -156,9 +156,9 @@ function App() {
           </div>
           <div className='card-body'>
             <p className='card-text'>
-              <strong>No!</strong> This app was built using React.js and so all
-              of the logic and processing is done in your browser. No contact
-              list data is sent to a backend server.
+              <strong>No!</strong> This app was built using React.js with all of
+              the logic and processing done in your browser. No contact list
+              data is sent to a backend server.
             </p>
           </div>
         </div>
