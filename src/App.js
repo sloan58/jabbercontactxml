@@ -1,7 +1,13 @@
 import { CSVReader } from 'react-papaparse'
 
 function App() {
+  // Function to receive the uploaded file
   const uploadFile = (data) => {
+    // Remove the headers
+    data.shift()
+
+    // Get a list of unique Group names.
+    // If the group is empty, assign the 'Contacts' group
     const groups = data
       .map((row) => {
         if (row.data[2] === '') {
@@ -11,34 +17,53 @@ function App() {
       })
       .filter((row, index, _arr) => _arr.indexOf(row) === index)
 
-    groups.shift()
-
+    // Find rows without a group and set their group as 'Contacts'
     data.forEach((row, index) => {
       if (row.data[2] === '') {
         data[index].data[2] = 'Contacts'
       }
     })
 
+    // Begin XML creation
     let outXml = '<?xml version="1.0" encoding="UTF-8"?><buddylist>'
 
+    // Iterate each group to build the group members
     groups.forEach((group) => {
+      // Begin group XML
       outXml = outXml.concat(`<group>`)
+
+      // Begin group name XML
       outXml = outXml.concat(`<gname>${group.trim()}</gname>`)
+
+      // Iterate each contact to check their group membership
       data.forEach((row) => {
+        // user@domain (row.data[0]) needs to be present
+        // The user's group needs to be the current group in process
         if (row.data[0] !== '' && row.data[2] === group) {
+          // Begin user XML
           outXml = outXml.concat('<user>')
+
+          // Set the uname XML (user@domain)
           outXml = outXml.concat(`<uname>${row.data[0].trim()}</uname>`)
+
+          // If the nickname is set, add the fname XML
           if (row.data[1] !== '') {
             outXml = outXml.concat(`<fname>${row.data[1].trim() || ''}</fname>`)
           }
+
+          // End user XML
           outXml = outXml.concat(`</user>`)
         }
       })
+
+      // End group XML
       outXml = outXml.concat(`</group>`)
     })
 
+    // End buddylist XML
     outXml = outXml.concat('</buddylist>')
 
+    // Provide the output download
     const element = document.createElement('a')
     const file = new Blob([outXml], {
       type: 'text/plain',
