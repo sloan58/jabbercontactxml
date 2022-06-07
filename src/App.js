@@ -92,7 +92,7 @@ function App() {
             className='d-inline-block align-top mx-3'
             alt=''
           />
-          Jabber Contacts XML Generator {process.env.REACT_APP_STATIC_DOMAIN}
+          Jabber Contacts XML Generator
         </a>
       </nav>
       <div className='container'>
