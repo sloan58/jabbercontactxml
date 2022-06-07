@@ -113,7 +113,7 @@ function App() {
             <p className='card-text'>
               If you're building from the template file, keep the headers but
               remove row 2 before loading. The only required field to build the
-              list is the first one (user@domain). The nickname and group name
+              list is the first one (User ID). The nickname and group name
               are optional.
             </p>
             <p>
@@ -141,8 +141,8 @@ function App() {
             <ol className='card-text'>
               <li>Download the template from above</li>
               <li>
-                Fill in the details for each column (user@domain, nickname,
-                group)
+                Fill in the details for each column (UserID, Nickname,
+                Group)
               </li>
               <li>
                 Use the Upload option below to process your contacts CSV file{' '}

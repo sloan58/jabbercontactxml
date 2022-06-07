@@ -1,2 +1,2 @@
-User@Domain, Nickname, Group Name
-jenie_id@ipt.infra.dcn,Optional Nickname,Optional Group Name
+UserID, Nickname, Group Name
+jenie_id,Optional Nickname,Optional Group Name
