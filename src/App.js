@@ -45,7 +45,13 @@ function App() {
           outXml = outXml.concat('<user>')
 
           // Set the uname XML (user@domain)
-          outXml = outXml.concat(`<uname>${row.data[0].trim()}</uname>`)
+          if (process.env.REACT_APP_STATIC_DOMAIN && row.data[0].trim().split('@').length === 1) {
+            // .env exists to hard-code the domain
+            outXml = outXml.concat(`<uname>${row.data[0].trim()}@${process.env.REACT_APP_STATIC_DOMAIN}</uname>`)
+          } else {
+            // No .env exists to hardcode the domain
+            outXml = outXml.concat(`<uname>${row.data[0].trim()}</uname>`)
+          }
 
           // If the nickname is set, add the fname XML
           if (row.data[1] !== '') {
@@ -86,7 +92,7 @@ function App() {
             className='d-inline-block align-top mx-3'
             alt=''
           />
-          Jabber Contacts XML Generator
+          Jabber Contacts XML Generator {process.env.REACT_APP_STATIC_DOMAIN}
         </a>
       </nav>
       <div className='container'>
